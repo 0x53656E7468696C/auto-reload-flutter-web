@@ -11,12 +11,12 @@ When you run `flutter run -d web-server` (or similar) in the terminal, file chan
 Place `.ahr.sh` in the root of your Flutter project (the same directory as `pubspec.yaml`).
 
 
-your_flutter_project/
-├── .ahr.sh
-├── lib/
-├── web/
-├── pubspec.yaml
-└── ...
+> your_flutter_project/
+> ├── .ahr.sh
+> ├── lib/
+> ├── web/
+> ├── pubspec.yaml
+> └── ...
 
 
 
@@ -32,29 +32,31 @@ your_flutter_project/
 <details>
 <summary><strong>Ubuntu / Debian / WSL / Linux Mint / Pop!_OS</strong></summary>
 
-sudo apt update
-sudo apt install entr
+    sudo apt update
+    sudo apt install entr
 
 </details> <details> <summary><strong>Fedora / RHEL / CentOS / AlmaLinux</strong></summary>
 
-sudo dnf install entr
+    sudo dnf install entr
 
 </details> <details> <summary><strong>Arch Linux / Manjaro</strong></summary>
 
-sudo pacman -S entr
+    sudo pacman -S entr
 
 </details> <details> <summary><strong>openSUSE</strong></summary>
 
 sudo zypper install entr
 
+    sudo zypper install entr
+
 </details> <details> <summary><strong>macOS (Homebrew)</strong></summary>
 
-brew install entr
+    brew install entr
 
 </details> <details> <summary><strong>Termux (Android)</strong></summary>
 
-pkg update
-pkg install entr
+    pkg update
+    pkg install entr
 
 If you’re using a Nix‑based environment (e.g. dev.nix), add entr to your packages.
 </details> 

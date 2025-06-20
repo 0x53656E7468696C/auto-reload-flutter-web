@@ -1,61 +1,74 @@
-# auto-reload-flutter-web
-Shell script to make your flutter to do reload on file changes while running on web server with custom port.
+# auto‑reload‑flutter‑web
 
-auto hotreload and auto reload won't work if you run your app through terminal, Some times I run flutter in web server mode on android and noticed that reload wont happens unless I manually press reload key on terminal 
+> A lightweight shell script to enable automatic hot‑reload and full‑reload for your Flutter web project.
 
-This script fixes that.
+When you run `flutter run -d web-server` (or similar) in the terminal, file changes don’t trigger a reload automatically. With `.ahr.sh`, every time you save a Dart , your Flutter web app will hot‑reload (or full‑reload, if necessary) without you having to press any key.
 
-### put that .ahr.sh in your project dir where your pubspec is located.
-### type chmod +x .ahr.sh.
-###  Now ./.ahr.sh 
+---
 
-you are ready to go. wait have you installed. it depends on it so install entr.  ,
+## 📁 Project Structure
+
+Place `.ahr.sh` in the root of your Flutter project (the same directory as `pubspec.yaml`).
 
 
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-Installing entr
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+your_flutter_project/
+├── .ahr.sh
+├── lib/
+├── web/
+├── pubspec.yaml
+└── ...
 
-Linux (Debian/Ubuntu / WSL / Linux Mint / Pop!_OS / …)
 
-bash
+
+---
+
+## ⚙️ Prerequisites
+
+- **Flutter SDK** (configured for web)
+- **entr** (a lightweight file‑watcher)
+
+### Install `entr`
+
+<details>
+<summary><strong>Ubuntu / Debian / WSL / Linux Mint / Pop!_OS</strong></summary>
 
 sudo apt update
 sudo apt install entr
 
-Fedora / RHEL / CentOS / Alma
-
-bash
+</details> <details> <summary><strong>Fedora / RHEL / CentOS / AlmaLinux</strong></summary>
 
 sudo dnf install entr
 
-Arch Linux / Manjaro
-
-bash
+</details> <details> <summary><strong>Arch Linux / Manjaro</strong></summary>
 
 sudo pacman -S entr
 
-openSUSE
-
-bash
+</details> <details> <summary><strong>openSUSE</strong></summary>
 
 sudo zypper install entr
 
-MacOS (with Homebrew)
-
-bash
+</details> <details> <summary><strong>macOS (Homebrew)</strong></summary>
 
 brew install entr
 
-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-Termux
-
-Termux usually provides entr in its “main” or “x11” repository. Simply do:
-
-bash
+</details> <details> <summary><strong>Termux (Android)</strong></summary>
 
 pkg update
 pkg install entr
 
-if you are working in project idx aka firebase studio, add that dev.nix packages
+If you’re using a Nix‑based environment (e.g. dev.nix), add entr to your packages.
+</details> 
 
+
+
+🚀 Usage
+
+    Make the script executable
+
+chmod +x .ahr.sh
+
+Run your Flutter web server via the script
+
+./ahr.sh
+
+Start coding!

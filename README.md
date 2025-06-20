@@ -12,10 +12,15 @@ Place `.ahr.sh` in the root of your Flutter project (the same directory as `pubs
 
 
 > your_flutter_project/
+> 
 > ├── .ahr.sh
+> 
 > ├── lib/
+> 
 > ├── web/
+> 
 > ├── pubspec.yaml
+> 
 > └── ...
 
 
@@ -65,12 +70,12 @@ If you’re using a Nix‑based environment (e.g. dev.nix), add entr to your pac
 
 🚀 Usage
 
-    Make the script executable
+Make the script executable
 
-chmod +x .ahr.sh
+     chmod +x .ahr.sh
 
 Run your Flutter web server via the script
 
-./ahr.sh
+     ./ahr.sh
 
 Start coding!
